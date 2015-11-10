@@ -1,0 +1,36 @@
+.btn {
+  margin-left: 35%;
+  width: 30%;
+  margin-top: 2.5%;
+
+}
+
+.input {
+  margin-right: 25%;
+  margin-left: 25%;
+}
+
+form {
+  margin-top: 5%;
+}
+
+h1 {
+  margin-left: 40%;
+  margin-top: 7%;
+}
+
+
+.bg-img1 {
+  background-image: url(http://manila.peninsula.com/en/~/media/Images/Manila/Offers/Ultimate%20Champagne%20Brunch.ashx?mw=952);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.white {
+  color: gold;
+  text-shadow: 2px 2px black;
+}
+
+

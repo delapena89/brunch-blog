@@ -11,5 +11,8 @@ app.config(function($routeProvider) {
     })
     .when('/reviewers', {
       templateUrl: 'views/reviewers.html'
+    })
+    .when('/login', {
+      templateUrl: 'views/admin-login.html'
     });
 });
