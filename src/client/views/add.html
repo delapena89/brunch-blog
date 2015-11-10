@@ -16,7 +16,7 @@
                                 <div class="col-xs-8 col-xs-offset-2">
                                     <div class="form-group">
                                         <h5 class="inputTitle">Restaurant Name</h5>
-                                        <input type="text" ng-model="newPost.firstName" class="form-control">
+                                        <input type="text" ng-model="newPost.restaurantName" class="form-control">
                                     </div>
                                     <div class="form-group">
                                         <h5 class="inputTitle">Address</h5>
@@ -63,7 +63,7 @@
                                         <div class="col-sm-3">
                                             <div class="completed fontMontserrat left">
                                                 <h5>Current Post</h5>
-                                                <div><strong>First Name:</strong> {{ newPost.firstName }}</div>
+                                                <div><strong>Restaurant Name:</strong> {{ newPost.restaurantName }}</div>
                                                 <div><strong>Last Name: </strong>{{ newPost.lastName }}</div>
                                                  <div><strong>Position:</strong> {{ newPost.position }}</div>
                                                 <div><strong>Company:</strong> {{ newPost.company }}</div>
@@ -98,13 +98,11 @@
                                         <div class="col-sm-3">
                                             <div class="completed fontMontserrat left">
                                                 <h5>Current Post</h5>
-                                                <div><strong>First Name:</strong> {{ newPost.firstName }}</div>
+                                                <div><strong>Restaurant Name:</strong> {{ newPost.restaurantName }}</div>
                                                 <div><strong>Last Name: </strong>{{ newPost.lastName }}</div>
                                                  <div><strong>Position: </strong> {{ newPost.position }}</div>
                                                 <div><strong>Company: </strong> {{ newPost.company }}</div>
                                                 <br>
-                                                <div><strong>Total Questions: </strong> {{ (newPost.content).length || 0}}</div>
-                                                <div><strong>Total Images: </strong> {{ (newPost.img).length || 0}}</div>
                                                 <br>
                                                 <br>
                                                 <br>
@@ -112,18 +110,9 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <input type="text" id="questionInput" class="form-control" ng-model="question" placeholder="New Question">
-                                            </div>
-                                            <div class="form-group">
-                                                <textarea id="answerInput" rows="10" type="text" class="form-control" ng-model="answer" placeholder="New Response"></textarea>
+                                                <textarea id="answerInput" rows="10" type="text" class="form-control" ng-model="answer" placeholder="New Article Body"></textarea>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="row pad">
-                                        <div class="col-sm-8 col-sm-offset-2">
-                                            <button type="submit" class="btn btn-md"class="addBtn blackColor transparent" ng-click="newPostContent()"><i class="fa fa-plus"></i></button>
-                                        </div>
-                                        <br>
                                     </div>
                                     <div class="row">
                                         <div ng-repeat="content in tempContent" class="col-sm-6 allContent">
@@ -131,7 +120,7 @@
                                             <i class="fa fa-pencil-square-o space" ng-click="editQuestion()"></i>
                                             <br>
                                             <div class="interviewer">{{ content.question }}</div>
-                                            <div class="interviewee"><strong>{{ newPost.firstName }}:</strong> {{ content.answer }}</div>
+                                            <div class="interviewee"><strong>{{ newPost.restaurantName }}:</strong> {{ content.answer }}</div>
                                         </div>
                                     </div>
                                 </div>
@@ -148,13 +137,11 @@
                                         <div class="col-sm-3">
                                             <div class="completed fontMontserrat left">
                                                 <h5>Current Post</h5>
-                                                <div><strong>First Name:</strong> {{ newPost.firstName }}</div>
+                                                <div><strong>Restaurant Name:</strong> {{ newPost.restaurantName }}</div>
                                                 <div><strong>Last Name: </strong>{{ newPost.lastName }}</div>
                                                  <div><strong>Position:</strong> {{ newPost.position }}</div>
                                                 <div><strong>Company:</strong> {{ newPost.company }}</div>
                                                 <br>
-                                                <div><strong>Total Questions: </strong> {{ (newPost.content).length || 0}}</div>
-                                                <div><strong>Total Images: </strong> {{ (newPost.img).length || 0}}</div>
                                                 <br>
                                                 <br>
                                                 <br>
@@ -183,7 +170,7 @@
                                     </div> -->
                                     <div class="row">
                                         <div class="col-xs-12">
-                                            <span ng-click="addBlogPost(); getLast()" class="arrowSpace highlight">Submit<i class="fa fa-arrow-right"></i></span>
+                                            <span ng-click="addBlogPost(); getLast()" class="btn btn-primary arrowSpace highlight">Submit<i class="fa fa-arrow-right"></i></span>
                                         </div>
                                     </div>
                                 </div>

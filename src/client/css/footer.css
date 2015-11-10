@@ -1,6 +1,6 @@
-.footer {
-  text-align: center;
-  color: black;
-  margin-top: 1%;
+#footer {
+  display: block;
+  bottom: 0;
+  position: fixed;
 }
 

@@ -1,8 +1,9 @@
 .img {
   height: 32px;
   width: 32px;
-  margin-top: 10px;
-  margin-right: 20px;
+  margin-top: -12px;
+  margin-left: -15px;
+
 }
 
 img {
@@ -12,7 +13,6 @@ img {
 
 a {
   font-size: 1.25em;
-  margin-top: 10px;
 }
 
 .title {
