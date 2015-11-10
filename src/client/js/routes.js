@@ -14,5 +14,8 @@ app.config(function($routeProvider) {
     })
     .when('/login', {
       templateUrl: 'views/admin-login.html'
+    })
+    .when('/add', {
+      templateUrl: 'views/add.html'
     });
 });
