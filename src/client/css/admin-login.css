@@ -10,22 +10,40 @@
   margin-left: 25%;
 }
 
-form {
+/*form {
   margin-top: 5%;
-}
+}*/
 
 h1 {
   margin-left: 40%;
-  margin-top: 7%;
 }
 
 
-.bg-img1 {
+.background-image {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: block;
   background-image: url(http://manila.peninsula.com/en/~/media/Images/Manila/Offers/Ultimate%20Champagne%20Brunch.ashx?mw=952);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   width: 100%;
   height: 100%;
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+}
+
+.content {
+  /*position: fixed;*/
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .white {
