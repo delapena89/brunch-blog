@@ -38,7 +38,9 @@ app.controller('brunchCtrl', ['$scope', '$rootScope','$http','$location',  funct
   $scope.instagram = function () {
     $http.post('/api/instagram')
     .then(function(response) {
-      console.log(response);
+      console.log(response['data'][0].images.standard_resolution.url);
+        $scope.photos = response.data;
+        console.log($scope.photos);
     });
   };
 
