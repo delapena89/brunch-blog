@@ -17,5 +17,8 @@ app.config(function($routeProvider) {
     })
     .when('/add', {
       templateUrl: 'views/add.html'
+    })
+    .when('/register', {
+      templateUrl: 'views/register.html'
     });
 });
