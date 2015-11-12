@@ -1,9 +1,26 @@
 <h2>Home Page</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<div class='row'>
+        <div class='col-md-6'>
+          <h1>Hello</h1>
+          <p>Another weekend, another brunch. Brunch is easily my favorite meal of the weekend. Almost every weekend, I scope out the hottest brunch spots in whatever city or town I’m in and make sure they serve booze because what is brunch without a Bloody Mary?</p>
+        </div>
+        <div class='col-md-6'>
+          <h1>Grading Scale</h1>
+          <p>0-50: This Bloody Mary sucks. I would not drink it again nor would I ever recommend it to anyone. It is essentially considered the worst Bloody Mary I have ever had and makes me feel like throwing up all of the remnants from last night’s rendezvous.</p>
+
+          <p>51-60: This Bloody Mary is bad. It’s drinkable, but horrible. The only reason I continue to drink it is to get rid of my hangover.</p>
+
+          <p>61-70: This Bloody Mary is “meh.” I can drink it and it tastes okay, but I would not return to this location and order this Bloody Mary. It it lacking in notable attributes.</p>
+
+          <p>71-80: This is an average Bloody Mary. Tasty, drinkable, somewhat pleasing to the eye. Nothing too special, but I am not complaining.</p>
+
+          <p>81-90: I would recommend this Bloody Mary to anyone. It is scrumptious in terms of garnishes and actual drink, is aesthetically pleasing, and is not just a “regular old Bloody Mary.”</p>
+
+          <p>91-98: This Bloody Mary is pretty freakin’ awesome!</p>
+
+          <p>99-100: This Bloody Mary gets an A+ and I could drink it every damn morning.</p>
+        </div>
+    </div>
 
 <div  ng-repeat='photo in photos | limitTo: 18'><img class='col-md-8 col-md-offset-1 picture' ng-src="{{photo.images.standard_resolution.url}}"></div>
