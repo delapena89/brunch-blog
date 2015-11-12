@@ -14,10 +14,13 @@ var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var expressSession = require('express-session');
 var User = mongoose.model('users');
+var Review = mongoose.model('reviews');
 
 // seed database
 var databaseSeed = require('../../seed');
 databaseSeed();
+var databaseSeedReview = require('../../seed');
+databaseSeedReview();
 
 
 

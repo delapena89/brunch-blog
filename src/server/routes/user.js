@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
 var User = mongoose.model('users');
+var Review = mongoose.model('reviews');
 var passport = require('passport');
 var local = require('passport-local');
 
