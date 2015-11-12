@@ -6,4 +6,4 @@ consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-<div  ng-repeat='photo in photos'><img class='col-md-6 picture' ng-src="{{photo.images.standard_resolution.url}}"></div>
+<div  ng-repeat='photo in photos | limitTo: 18'><img class='col-md-8 col-md-offset-1 picture' ng-src="{{photo.images.standard_resolution.url}}"></div>
