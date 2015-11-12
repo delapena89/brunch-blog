@@ -7,7 +7,19 @@ var User = new Schema({
   password: String
 });
 
+var Review = new Schema({
+  restaurantName: String,
+  address: String,
+  location: String,
+  website: String,
+  instagram: String,
+  twitter: String,
+  article: String,
+  images: {}
+});
+
 User.plugin(passportLocalMongoose);
 
 module.exports = mongoose.model('users', User);
+module.exports = mongoose.model('reviews', Review);
 
