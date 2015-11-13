@@ -40,8 +40,10 @@
             </div>
         </div>
 
+        <!-- REVIEW INFO -->
         <div class='row'>
             <div class='col-md-10 col-md-offset-1'>
+            <h3>Review Info</h3>
                 <div class='form-group'>
                     <h5>Review</h5>
                     <textarea  rows='15' type='text' ng-model='body' class='form-control' placeholder='Enter article text here'></textarea>
@@ -61,51 +63,26 @@
         </div>
         <br>
 
+        <!-- PHOTO INFO -->
 
-
-
-
-
-
-
-                    <!-- PHOTO FORM -->
-                    <div class="row">
-                        <div>
-                            <section class="sections" ng-hide="photoForm">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-xs-8 col-xs-offset-2">
-                                            <div class="imgPath">
-                                            <!-- <h5>Select Files</h5> -->
-                                            <!-- <div class="form-group"> -->
-                                                <h5 class="inputTitle">Image Path</h5>
-                                                <input type="text" ng-model="newPost.img" class="form-control" placeholder="url(https://dryimages.s3.amazonaws.com/example.jpg)">
-                                                <input type="text" ng-model="newPost.homeImage" class="form-control" placeholder="https://dryimages.s3.amazonaws.com/example.jpg">
-                                            <!-- </div> -->
-                                          <!--   <button type="submit" class="btn btn-sm" id="" ng-click="">Upload files</button>
- -->                                            <br>
-                                                <br>
-                                            </div>
-                                        </div>
-                                    </div>
-<!--                                     <div class="row">
-                                        <div ng-repeat="url in img" class="col-sm-6 allContent">
-                                            <i class="fa fa-remove space"></i>
-                                            <br>
-                                            <div>Image {{ img.url }}</div>
-                                        </div>
-                                    </div> -->
-                                    <div class="row">
-                                        <div class="col-xs-12">
-                                            <span ng-click="addBlogPost()" class="btn btn-primary">Submit</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
-                    </div>
-                </form>
+        <div class='row'>
+            <div class='col-md-10 col-md-offset-1'>
+            <h3>Image Info</h3>
+                <div class='form-group'>
+                    <h5>Review</h5>
+                    <input type='text' ng-model='image' class='form-control' placeholder='Enter image URL from s3amazon or whatever we decide to use ex. (https://brunchblog.s3.amazonaws.com/example.jpg)'>
+                </div>
             </div>
         </div>
-    </div>
-</div>
+
+         <div class="row">
+            <div class="col-md-8">
+                <span ng-click="addBlogPost()" class="btn btn-danger center btn-lg">Submit</span>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+
