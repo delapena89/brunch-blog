@@ -5,127 +5,68 @@
                 <h2 class="addTitle">Add Blog Post</h2>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xs-12">
-                <form role="form">
+        <!-- RESTAURANT INFO -->
+        <div class='row'>
+            <div class='col-md-6'>
+                <h3>Restaurant Info</h3>
+                <div class='form-group'>
+                    <h5>Restaurant Name</h5>
+                    <input type='text' ng-model='restaurantName' class='form-control' required>
+                </div>
+                <div class='form-group'>
+                    <h5>Address</h5>
+                    <input type='text' ng-model='address' class='form-control' required>
+                </div>
+                <div class='form-gorup'>
+                    <h5>Location/Neighboorhood</h5>
+                    <input type='text' ng-model='location' class='form-control' required>
+                </div>
+            </div>
+            <!-- SOCIAL MEDIA INFO -->
+            <div class='col-md-6'>
+            <h3>SOCIAL MEDIA INFO</h3>
+                <div class='form-group'>
+                    <h5>Website</h5>
+                    <input type='text' ng-model='website' class='form-control'>
+                </div>
+                <div class='form-group'>
+                    <h5>Instagram</h5>
+                    <input type='text' ng-model='instagram1' class='form-control'>
+                </div>
+                <div class='form-group'>
+                    <h5>Twitter</h5>
+                    <input type='text' ng-model='twitter' class='form-control'>
+                </div>
+            </div>
+        </div>
 
-                    <!-- META FORM -->
-                    <div class="row">
-                        <div class="col-md-8 col-xs-offset-2">
-                            <section class="sections" ng-hide="metaForm">
-                                <div class="col-xs-8 col-xs-offset-2">
-                                    <div class="form-group">
-                                        <h5 class="inputTitle">Restaurant Name</h5>
-                                        <input type="text" ng-model="newPost.restaurantName" class="form-control">
-                                    </div>
-                                    <div class="form-group">
-                                        <h5 class="inputTitle">Address</h5>
-                                        <input type="text" ng-model="newPost.lastName" class="form-control">
-                                    </div>
-                                    <div class="form-group">
-                                        <h5 class="inputTitle">Location/Neighboorhood</h5>
-                                        <input type="text" ng-model="newPost.location" class="form-control">
-                                    </div>
-                                    <br>
-                                </div>
-                            </section>
-                        </div>
-                    </div>
+        <div class='row'>
+            <div class='col-md-10 col-md-offset-1'>
+                <div class='form-group'>
+                    <h5>Review</h5>
+                    <textarea  rows='15' type='text' ng-model='body' class='form-control' placeholder='Enter article text here'></textarea>
+                </div>
+            </div>
+        </div>
 
-                    <!-- SOCIAL FORM -->
-                    <div class="row">
-                        <div class="col-xs-8 col-xs-offset-2">
-                            <section class="sections" ng-hide="socialForm">
-                                <div class="col-xs-8 col-xs-offset-2">
-                                    <div class="form-group">
-                                        <h5 class="inputTitle">Website</h5>
-                                        <input type="text" ng-model="newPost.website" class="form-control">
-                                    </div><div class="form-group">
-                                        <h5 class="inputTitle">Instagram</h5>
-                                        <input type="text" ng-model="newPost.instagram" class="form-control">
-                                    </div>
-                                    <div class="form-group">
-                                        <h5 class="inputTitle">Twitter</h5>
-                                        <input type="text" ng-model="newPost.twitter" class="form-control">
-                                    </div>
-                                    <br>
-                                </div>
-                            </section>
-                        </div>
-                    </div>
+        <div class='row'>
+            <div class='col-md-6'>
+                <h5>Rating</h5>
+                <input type='number' ng-model='rating' class='form-control'>
+            </div>
+            <div class='col-md-6'>
+                <h5>Date Published</h5>
+                <input type='text' ng-model='published' class='form-control' placeholder='DD/MM/YYYY'>
+            </div>
+        </div>
+        <br>
 
-                   <!-- SUMMARY FORM  -->
-                    <div class="row">
-                        <div>
-                            <section class="sections" ng-show="summaryForm">
-                                <div class="container">
-                                    <div class="row pad">
-                                        <div class="col-sm-3">
-                                            <div class="completed fontMontserrat left">
-                                                <h5>Current Post</h5>
-                                                <div><strong>Restaurant Name:</strong> {{ newPost.restaurantName }}</div>
-                                                <div><strong>Address: </strong>{{ newPost.lastName }}</div>
-                                                 <div><strong>location:</strong> {{ newPost.location }}</div>
-                                                <div><strong>Company:</strong> {{ newPost.company }}</div>
-                                                <br>
-                                                <div><strong>Total Questions: </strong> {{ (newPost.content).length || 0}}</div>
-                                                <div><strong>Total Images: </strong> {{ (newPost.img).length || 0}}</div>
-                                                <br>
-                                                <br>
-                                                <br>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <h3>Summary</h3>
-                                            <div class="form-group">
-                                                <textarea id="summary" rows="10" type="text" class="form-control" ng-model="newPost.summary" placeholder="Add summary here"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
-                    </div>
 
-                    <!-- INTERVIEW FORM -->
-                    <div class="row">
-                        <div>
-                            <section class="sections"  ng-hide="interviewForm">
-                                <div class="container">
-                                    <div class="row pad">
-                                        <div class="col-sm-3">
-                                            <div class="completed fontMontserrat left">
-                                                <h5>Current Post</h5>
-                                                <div><strong>Restaurant Name:</strong> {{ newPost.restaurantName }}</div>
-                                                <div><strong>Address: </strong>{{ newPost.lastName }}</div>
-                                                 <div><strong>Location: </strong> {{ newPost.location }}</div>
-                                                <br>
-                                                <br>
-                                                <br>
-                                                <br>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <textarea id="answerInput" rows="10" type="text" class="form-control" ng-model="answer" placeholder="New Article Body"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div ng-repeat="content in tempContent" class="col-sm-6 allContent">
-                                            <i class="fa fa-remove space" ng-click="deleteQuestion()"></i>
-                                            <i class="fa fa-pencil-square-o space" ng-click="editQuestion()"></i>
-                                            <br>
-                                            <div class="interviewer">{{ content.question }}</div>
-                                            <div class="interviewee"><strong>{{ newPost.restaurantName }}:</strong> {{ content.answer }}</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
-                    </div>
+
+
+
+
+
 
                     <!-- PHOTO FORM -->
                     <div class="row">
@@ -133,19 +74,7 @@
                             <section class="sections" ng-hide="photoForm">
                                 <div class="container">
                                     <div class="row">
-                                        <div class="col-sm-3">
-                                            <div class="completed fontMontserrat left">
-                                                <h5>Current Post</h5>
-                                                <div><strong>Restaurant Name:</strong> {{ newPost.restaurantName }}</div>
-                                                <div><strong>Address: </strong>{{ newPost.lastName }}</div>
-                                                 <div><strong>Location:</strong> {{ newPost.location }}</div>
-                                                <br>
-                                                <br>
-                                                <br>
-                                                <br>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-offset-1 col-sm-4">
+                                        <div class="col-xs-8 col-xs-offset-2">
                                             <div class="imgPath">
                                             <!-- <h5>Select Files</h5> -->
                                             <!-- <div class="form-group"> -->
@@ -168,7 +97,7 @@
                                     </div> -->
                                     <div class="row">
                                         <div class="col-xs-12">
-                                            <span ng-click="addBlogPost(); getLast()" class="btn btn-primary arrowSpace highlight">Submit<i class="fa fa-arrow-right"></i></span>
+                                            <span ng-click="addBlogPost()" class="btn btn-primary">Submit</span>
                                         </div>
                                     </div>
                                 </div>

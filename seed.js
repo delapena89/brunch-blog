@@ -44,7 +44,7 @@ function databaseSeedReview() {
         var newReview = new Review(reviewSeed[i]);
         newReview.save(function(err, success){
           if(!err) {
-            console.log('database object seeded.');
+            console.log('Review object seeded.');
           }
         });
       }
