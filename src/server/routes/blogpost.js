@@ -29,6 +29,15 @@ router.post('/brunch-reviews', function(req, res, next) {
     }).done();
 });
 
+router.get('/brunch-reviews', function(req,res,next) {
+  Review.findQ()
+  .then(function(results) {
+    res.json(results);
+  }).catch(function(results) {
+    res.json({'message': results});
+  }).done();
+});
+
 
 
 module.exports = router;
