@@ -5,6 +5,10 @@ app.controller('blogCtrl', ['$scope', '$rootScope','httpService','$location', fu
     $scope.reviews = httpService.addBlogPost($scope.review);
     };
 
+  $scope.getBlogPosts = function(){
+    $scope.reviews = httpService.getBlogPosts($scope.reviews);
+  };
+
 
 
 

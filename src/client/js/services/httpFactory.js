@@ -11,16 +11,16 @@ function httpService($http) {
   return factory;
 
   function addBlogPost(payload){
-    $http.post('/brunch-reviews', payload)
+    $http.post('/users/brunch-reviews', payload)
       .then(function(response) {
         console.log('hello');
-        console.log('payload', payload);
+        console.log('payload', response);
         return response.data;
     });
     }
 
   function getBlogPosts() {
-    $http.get('/brunch-reviews')
+    $http.get('users/brunch-reviews')
     .then(function(response){
       return response.data;
     });

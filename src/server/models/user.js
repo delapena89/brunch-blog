@@ -15,6 +15,8 @@ var Review = new Schema({
   instagram1: String,
   twitter: String,
   article: String,
+  rating: Number,
+  published: String,
   images: {}
 });
 
