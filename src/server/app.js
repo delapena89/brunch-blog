@@ -36,6 +36,7 @@ passport.deserializeUser(User.deserializeUser());
 // *** routes *** //
 var routes = require('./routes/index.js');
 var userRoutes = require('./routes/user.js');
+var blogRoutes = require('./routes/blogpost.js');
 
 
 // *** express instance *** //
@@ -79,6 +80,7 @@ app.use(passport.session());
 // *** main routes *** //
 app.use('/', routes);
 app.use('/users/', userRoutes);
+app.use('/users/', blogRoutes);
 
 
 // catch 404 and forward to error handler

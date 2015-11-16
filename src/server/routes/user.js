@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
 var User = mongoose.model('users');
-var Review = mongoose.model('reviews');
 var passport = require('passport');
 var local = require('passport-local');
 
@@ -59,6 +58,5 @@ router.get('/logout', function(req, res) {
   res.status(200).json({status: "Logged out."});
 });
 
-
-module.exports =router;
+module.exports = router;
 

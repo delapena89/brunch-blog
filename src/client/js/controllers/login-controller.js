@@ -52,4 +52,6 @@ app.controller('brunchCtrl', ['$scope', '$rootScope','$http','$location',  funct
 
 
 
+
+
 }]);

@@ -4,7 +4,8 @@ app.config(function($routeProvider) {
       templateUrl: 'views/home.html',
     })
     .when('/brunch-reviews', {
-      templateUrl: 'views/brunch-reviews.html'
+      templateUrl: 'views/brunch-reviews.html',
+      controller: 'blogCtrl'
     })
     .when('/about', {
       templateUrl: 'views/about.html'
@@ -16,7 +17,8 @@ app.config(function($routeProvider) {
       templateUrl: 'views/admin-login.html'
     })
     .when('/add', {
-      templateUrl: 'views/add.html'
+      templateUrl: 'views/add.html',
+      controller: 'blogCtrl'
     })
     .when('/register', {
       templateUrl: 'views/register.html'

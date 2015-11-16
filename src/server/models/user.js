@@ -12,7 +12,7 @@ var Review = new Schema({
   address: String,
   location: String,
   website: String,
-  instagram: String,
+  instagram1: String,
   twitter: String,
   article: String,
   images: {}

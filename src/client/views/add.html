@@ -11,15 +11,15 @@
                 <h3>Restaurant Info</h3>
                 <div class='form-group'>
                     <h5>Restaurant Name</h5>
-                    <input type='text' ng-model='restaurantName' class='form-control' required>
+                    <input type='text' ng-model='review.restaurantName' id='restaurantName' class='form-control' required>
                 </div>
                 <div class='form-group'>
                     <h5>Address</h5>
-                    <input type='text' ng-model='address' class='form-control' required>
+                    <input type='text' ng-model='review.address' id='address' class='form-control' required>
                 </div>
                 <div class='form-gorup'>
                     <h5>Location/Neighboorhood</h5>
-                    <input type='text' ng-model='location' class='form-control' required>
+                    <input type='text' ng-model='review.location' id='location' class='form-control' required>
                 </div>
             </div>
             <!-- SOCIAL MEDIA INFO -->
@@ -27,15 +27,15 @@
             <h3>SOCIAL MEDIA INFO</h3>
                 <div class='form-group'>
                     <h5>Website</h5>
-                    <input type='text' ng-model='website' class='form-control'>
+                    <input type='text' ng-model='review.website' id='website' class='form-control'>
                 </div>
                 <div class='form-group'>
                     <h5>Instagram</h5>
-                    <input type='text' ng-model='instagram1' class='form-control'>
+                    <input type='text' ng-model='review.instagram1' id='instagram' class='form-control'>
                 </div>
                 <div class='form-group'>
                     <h5>Twitter</h5>
-                    <input type='text' ng-model='twitter' class='form-control'>
+                    <input type='text' ng-model='review.twitter' id='twitter' class='form-control'>
                 </div>
             </div>
         </div>
@@ -46,7 +46,7 @@
             <h3>Review Info</h3>
                 <div class='form-group'>
                     <h5>Review</h5>
-                    <textarea  rows='15' type='text' ng-model='body' class='form-control' placeholder='Enter article text here'></textarea>
+                    <textarea  rows='15' type='text' ng-model='review.body' id='article' class='form-control' placeholder='Enter article text here'></textarea>
                 </div>
             </div>
         </div>
@@ -54,11 +54,11 @@
         <div class='row'>
             <div class='col-md-6'>
                 <h5>Rating</h5>
-                <input type='number' ng-model='rating' class='form-control'>
+                <input type='number' ng-model='review.rating' id='rating' class='form-control'>
             </div>
             <div class='col-md-6'>
                 <h5>Date Published</h5>
-                <input type='text' ng-model='published' class='form-control' placeholder='DD/MM/YYYY'>
+                <input type='text' ng-model='review.published' class='form-control' id='published' placeholder='DD/MM/YYYY'>
             </div>
         </div>
         <br>
@@ -70,7 +70,7 @@
             <h3>Image Info</h3>
                 <div class='form-group'>
                     <h5>Review</h5>
-                    <input type='text' ng-model='image' class='form-control' placeholder='Enter image URL from s3amazon or whatever we decide to use ex. (https://brunchblog.s3.amazonaws.com/example.jpg)'>
+                    <input type='text' ng-model='review.images' id='image' class='form-control' placeholder='Enter image URL from s3amazon or whatever we decide to use ex. (https://brunchblog.s3.amazonaws.com/example.jpg)'>
                 </div>
             </div>
         </div>
