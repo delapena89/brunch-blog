@@ -6,10 +6,13 @@ app.controller('blogCtrl', ['$scope', '$rootScope','httpService','$location', fu
     };
 
   $scope.getBlogPosts = function(){
-    $scope.reviews = httpService.getBlogPosts($scope.reviews);
+    httpService.getBlogPosts()
+    .success(function(response){
+      $scope.reviews = response;
+    });
   };
 
-
+$scope.getBlogPosts();
 
 
   }]);

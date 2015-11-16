@@ -20,9 +20,8 @@ function httpService($http) {
     }
 
   function getBlogPosts() {
-    $http.get('users/brunch-reviews')
-    .then(function(response){
-      return response.data;
-    });
+    return $http.get('/users/brunch-reviews');
   }
-}
+
+
+  }

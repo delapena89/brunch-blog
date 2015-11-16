@@ -32,7 +32,7 @@ router.post('/brunch-reviews', function(req, res, next) {
 router.get('/brunch-reviews', function(req,res,next) {
   Review.findQ()
   .then(function(results) {
-    res.json(results);
+res.json(results);
   }).catch(function(results) {
     res.json({'message': results});
   }).done();
