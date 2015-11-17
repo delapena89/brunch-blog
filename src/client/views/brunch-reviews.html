@@ -26,8 +26,8 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     <div class='col-md-12'>
       <p>{{review.article}}</p>
         <div class='btn-group center'>
-          <button class="btn btn-success border">Edit  <span class="glyphicon glyphicon-pencil"></span></button>
-          <button class="btn btn-danger small border">Delete  <span class="glyphicon glyphicon-remove"></span></button>
+          <button ng-if="loggedIn()" class="btn btn-success border">Edit  <span class="glyphicon glyphicon-pencil"></span></button>
+          <button ng-if="loggedIn()" class="btn btn-danger small border">Delete  <span class="glyphicon glyphicon-remove"></span></button>
         </div>
     </div>
   </div>
