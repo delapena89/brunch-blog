@@ -1,5 +1,17 @@
 app.controller('blogCtrl', ['$scope', '$rootScope','httpService','$location', function($scope, $rootScope, httpService, $location){
 
+  $scope.edit = false;
+
+  $scope.trueScope = function() {
+    $scope.edit = true;
+    console.log($scope.edit);
+  };
+
+  $scope.falseScope = function() {
+    $scope.edit = false;
+    console.log($scope.edit);
+  };
+
 
   $scope.addBlogPost = function(){
     $scope.reviews = httpService.addBlogPost($scope.review);
