@@ -42,6 +42,14 @@ app.controller('blogCtrl', ['$scope', '$rootScope','httpService','$location', fu
     });
   };
 
+  $scope.editSingleBlogPost = function(id, payload) {
+    httpService.editSingleBlogPost(id, payload)
+    .success(function(payload) {
+      console.log(payload);
+    });
+  };
+
+
 };
 
 

@@ -66,6 +66,31 @@ router.get('/brunch-reviews/:id', function(req, res, next) {
   }).done();
 });
 
+// put single review
+router.put('/brunch-reviews/:id', function(req, res, next) {
+  console.log(req.params.id, 'single review put');
+  var payload = {
+    restaurantName: editReview.restaurantName,
+    address: editReview.address,
+    location: editReview.location,
+    website: editReview.website,
+    instagram1: editReview.instagram1,
+    twitter: editReview.twitter,
+    article: editReview.article,
+    rating: editReview.rating,
+    published: editReview.published,
+    images: editReview.photos
+  };
+  Review.findByIdAndUpdateQ(req.params.id, payload)
+  .then(function(response) {
+    console.log(response, 'put got it');
+    res.json(response);
+  }).catch(function(response) {
+    console.log(response, 'put failure');
+    res.json({'message': response});
+  }).done();
+});
+
 
 
 

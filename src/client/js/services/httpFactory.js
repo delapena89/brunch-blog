@@ -6,7 +6,8 @@ function httpService($http) {
     addBlogPost: addBlogPost,
     getBlogPosts: getBlogPosts,
     deleteBlogPost: deleteBlogPost,
-    getSingleBlogPost: getSingleBlogPost
+    getSingleBlogPost: getSingleBlogPost,
+    editSingleBlogPost: editSingleBlogPost
   };
 
   return factory;
@@ -35,6 +36,12 @@ function httpService($http) {
     console.log(id);
     return $http.get('/users/brunch-reviews/' + id);
   }
+
+  function editSingleBlogPost(id, payload) {
+    console.log('click');
+    return $http.put('/users/brunch-reviews/' + id + payload);
+  }
+
 
 
 
