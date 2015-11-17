@@ -25,3 +25,17 @@ h4 {
   text-align: center;
 }
 
+.edit {
+  margin-right: 70px;
+  margin-left: 70px;
+}
+
+.edit-button {
+  margin-bottom: 40px;
+}
+
+.edit-border {
+  border: 2px solid red;
+  margin-bottom: 40px;
+}
+
