@@ -4,8 +4,8 @@ httpService.$inject = ['$http'];
 function httpService($http) {
   var factory = {
     addBlogPost: addBlogPost,
-    getBlogPosts: getBlogPosts
-
+    getBlogPosts: getBlogPosts,
+    deleteBlogPost: deleteBlogPost
   };
 
   return factory;
@@ -21,6 +21,12 @@ function httpService($http) {
 
   function getBlogPosts() {
     return $http.get('/users/brunch-reviews');
+  }
+
+  function deleteBlogPost(id) {
+    console.log('click');
+    console.log(id);
+    return $http.delete('/users/brunch-reviews/' + id);
   }
 
 

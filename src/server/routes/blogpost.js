@@ -5,7 +5,7 @@ var Review = mongoose.model('reviews');
 var passport = require('passport');
 var local = require('passport-local');
 
-
+// post single review
 router.post('/brunch-reviews', function(req, res, next) {
   console.log(req.body);
   newReview = new Review({
@@ -29,6 +29,7 @@ router.post('/brunch-reviews', function(req, res, next) {
     }).done();
 });
 
+// get ALL reviews
 router.get('/brunch-reviews', function(req,res,next) {
   Review.findQ()
   .then(function(results) {
@@ -37,6 +38,22 @@ res.json(results);
     res.json({'message': results});
   }).done();
 });
+
+
+// delete single review
+router.delete('/brunch-reviews/:id', function(req, res, next) {
+  console.log(req.params.id, 'hello');
+  Review.findByIdAndRemoveQ(req.params.id)
+  .then(function(response) {
+    console.log(response, 'delete');
+    res.json(response);
+  }).catch(function(response) {
+    console.log(response,'failure');
+    res.json({'message': response});
+  }).done();
+});
+
+
 
 
 

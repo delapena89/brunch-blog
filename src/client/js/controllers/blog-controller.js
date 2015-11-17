@@ -3,14 +3,30 @@ app.controller('blogCtrl', ['$scope', '$rootScope','httpService','$location', fu
 
   $scope.addBlogPost = function(){
     $scope.reviews = httpService.addBlogPost($scope.review);
+     $location.path('/brunch-reviews');
     };
 
   $scope.getBlogPosts = function(){
     httpService.getBlogPosts()
     .success(function(response){
       $scope.reviews = response;
+      console.log($scope.reviews);
+    });
+
+  $scope.deleteBlogPost = function(id) {
+    httpService.deleteBlogPost(id)
+    .success(function(response){
+      $scope.reviews = $scope.reviews.filter(function (review) {
+        return review._id !== response._id;
+      });
     });
   };
+
+};
+
+
+
+
 
 $scope.getBlogPosts();
 
