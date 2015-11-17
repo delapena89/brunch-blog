@@ -6,35 +6,16 @@ consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Reviews</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr ng-repeat='review in reviews'>
-      <td>{{review.restaurantName}}</td>
-      <td>{{review.address}}</td>
-      <td>{{review.location}}</td>
-      <td>{{review.website}}</td>
-      <td>{{review.instagram1}}</td>
-      <td>{{review.twitter}}</td>
-      <td>{{review.article}}</td>
-      <td>{{review.published}}</td>
-      <td>{{review.rating}}</td>
-    </tr>
-  </tbody>
-</table>
 
-<div ng-repeat='review in reviews'>
+
+<div class='blog' ng-repeat='review in reviews'>
   <h1>{{review.restaurantName}}</h1>
       <h3>{{review.address}}</h3>
       <h3>{{review.location}}</h3>
       <h3>{{review.website}}</h3>
       <h3>{{review.instagram1}}</h3>
       <h3>{{review.twitter}}</h3>
-      <h3>{{review.article}}</h3>
+      <p>{{review.article}}</p>
       <h3>{{review.published}}</h3>
       <h3>{{review.rating}}</h3>
 </div>

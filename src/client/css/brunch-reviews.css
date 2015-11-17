@@ -1,1 +1,8 @@
-
+.blog {
+  border: 2px solid black;
+  margin-right: 70px;
+  margin-left: 70px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-bottom: 25px;
+}
