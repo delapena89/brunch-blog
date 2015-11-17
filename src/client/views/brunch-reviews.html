@@ -10,14 +10,26 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
 <div class='blog' ng-repeat='review in reviews'>
   <h1>{{review.restaurantName}}</h1>
-      <h3>{{review.address}}</h3>
-      <h3>{{review.location}}</h3>
-      <h3>{{review.website}}</h3>
-      <h3>{{review.instagram1}}</h3>
-      <h3>{{review.twitter}}</h3>
-      <p>{{review.article}}</p>
-      <h3>{{review.published}}</h3>
-      <h3>{{review.rating}}</h3>
+  <div class='row'>
+    <div class='col-md-6'>
+      <h3>Address: {{review.address}}</h3>
+      <h3>Location: {{review.location}}</h3>
+      <h3>Rating: {{review.rating}}</h3>
+    </div>
+    <div class='col-md-6'>
+      <h3>Date Published: {{review.published}}</h3>
+      <h3>Website: {{review.website}}</h3>
+      <h3>Instagram: {{review.instagram1}}</h3>
+      <h3>Twitter: {{review.twitter}}</h3>
+    </div>
+  <div class='row'>
+    <p>{{review.article}}</p>
+      <div class='btn-group center'>
+        <button class="btn btn-success border">Edit  <span class="glyphicon glyphicon-pencil"></span></button>
+        <button class="btn btn-danger small border">Delete  <span class="glyphicon glyphicon-remove"></span></button>
+      </div>
+  </div>
+  </div>
 </div>
 
 

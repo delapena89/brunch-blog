@@ -1,8 +1,22 @@
 .blog {
-  border: 2px solid black;
+  border: 3px solid black;
   margin-right: 70px;
   margin-left: 70px;
   padding-left: 50px;
   padding-right: 50px;
   margin-bottom: 25px;
+}
+
+.center {
+  margin-bottom: 10px;
+  width: 400px;
+  margin-left: 475px;
+}
+
+.border {
+  border: 1.5px solid black;
+}
+
+.middle {
+  text-align: center;
 }
