@@ -53,6 +53,19 @@ router.delete('/brunch-reviews/:id', function(req, res, next) {
   }).done();
 });
 
+// get single review
+router.get('/brunch-reviews/:id', function(req, res, next) {
+  console.log(req.params.id, 'single review get');
+  Review.findByIdQ(req.params.id)
+  .then(function(response) {
+    console.log(response,'got it');
+    res.json(response);
+  }).catch(function(response){
+    console.log(response, 'failure');
+    res.json({'message': response});
+  }).done();
+});
+
 
 
 

@@ -34,6 +34,14 @@ app.controller('blogCtrl', ['$scope', '$rootScope','httpService','$location', fu
     });
   };
 
+  $scope.getSingleBlogPost  = function(id) {
+    httpService.getSingleBlogPost(id)
+    .success(function(response) {
+      console.log(response);
+      $scope.editReview = response;
+    });
+  };
+
 };
 
 
