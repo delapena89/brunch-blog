@@ -98,18 +98,24 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
 
 <div class='blog color' id='review._id' ng-repeat='review in reviews'>
-  <h1>{{review.restaurantName}}</h1>
+  <h1 class='push-middle'>{{review.restaurantName}}</h1>
   <div class='row'>
     <div class='col-md-6'>
-      <h3>Address: {{review.address}}</h3>
-      <h4>Location: {{review.location}}</h4>
-      <h3>Rating: {{review.rating}}</h3>
+        <h5>Date Published: {{review.published}}</h5>
+        <h5>Website: <a href= "http://{{review.website}}">{{review.website}}</a></h5>
+        <h5>Instagram: {{review.instagram1}}</h5>
+        <h5>Twitter: {{review.twitter}}</h4>
+
+
+
     </div>
     <div class='col-md-6'>
-      <h5>Date Published: {{review.published}}</h5>
-      <h4>Website: {{review.website}}</h4>
-      <h4>Instagram: {{review.instagram1}}</h4>
-      <h4>Twitter: {{review.twitter}}</h4>
+        <h5>Address: {{review.address}}</h5>
+        <h5>Location: {{review.location}}</h5>
+        <h5>Rating: {{review.rating}}</h5>
+
+
+
     </div>
   <div class='row'>
     <div class='col-md-12'>
