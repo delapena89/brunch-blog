@@ -42,10 +42,11 @@ app.controller('blogCtrl', ['$scope', '$rootScope','httpService','$location', fu
     });
   };
 
-  $scope.editSingleBlogPost = function(id, payload) {
-    httpService.editSingleBlogPost(id, payload)
-    .success(function(payload) {
-      console.log(payload);
+  $scope.editSingleBlogPost = function(id, update) {
+    var update = $scope.editReview;
+    httpService.editSingleBlogPost(id, update)
+    .success(function(update) {
+      console.log(update);
     });
   };
 

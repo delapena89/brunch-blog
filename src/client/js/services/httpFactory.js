@@ -37,9 +37,9 @@ function httpService($http) {
     return $http.get('/users/brunch-reviews/' + id);
   }
 
-  function editSingleBlogPost(id, payload) {
+  function editSingleBlogPost(id, update) {
     console.log('click');
-    return $http.put('/users/brunch-reviews/' + id + payload);
+    return $http.put('/users/brunch-reviews/' + id + '/'  + update);
   }
 
 

@@ -67,21 +67,21 @@ router.get('/brunch-reviews/:id', function(req, res, next) {
 });
 
 // put single review
-router.put('/brunch-reviews/:id', function(req, res, next) {
+router.put('/brunch-reviews/:id/:update', function(req, res, next) {
   console.log(req.params.id, 'single review put');
-  var payload = {
-    restaurantName: editReview.restaurantName,
-    address: editReview.address,
-    location: editReview.location,
-    website: editReview.website,
-    instagram1: editReview.instagram1,
-    twitter: editReview.twitter,
-    article: editReview.article,
-    rating: editReview.rating,
-    published: editReview.published,
-    images: editReview.photos
+  var update = {
+    restaurantName: req.body.restaurantName,
+    address: req.body.address,
+    location: req.body.location,
+    website: req.body.website,
+    instagram1: req.body.instagram1,
+    twitter: req.body.twitter,
+    article: req.body.article,
+    rating: req.body.rating,
+    published: req.body.published,
+    images: req.body.photos
   };
-  Review.findByIdAndUpdateQ(req.params.id, payload)
+  Review.findByIdAndUpdateQ(req.params.id, update)
   .then(function(response) {
     console.log(response, 'put got it');
     res.json(response);
