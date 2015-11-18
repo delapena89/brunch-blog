@@ -35,7 +35,25 @@ h4 {
 }
 
 .edit-border {
-  border: 2px solid red;
+  border: 4px solid royalblue;
   margin-bottom: 40px;
 }
+
+.center-button {
+  margin-left: 175px;
+}
+
+.color {
+  background-color: antiquewhite;
+}
+
+
+
+
+
+
+
+
+
+
 
