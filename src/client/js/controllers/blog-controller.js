@@ -16,6 +16,7 @@ app.controller('blogCtrl', ['$scope', '$rootScope','httpService','$location', fu
   $scope.addBlogPost = function(){
     $scope.reviews = httpService.addBlogPost($scope.review);
      $location.path('/brunch-reviews');
+     console.log($scope.reviews);
     };
 
   $scope.getBlogPosts = function(){
@@ -42,11 +43,15 @@ app.controller('blogCtrl', ['$scope', '$rootScope','httpService','$location', fu
     });
   };
 
-  $scope.editSingleBlogPost = function(id, update) {
-    var update = $scope.editReview;
-    httpService.editSingleBlogPost(id, update)
+  $scope.editSingleBlogPost = function(id) {
+    httpService.editSingleBlogPost(id, $scope.editReview)
     .success(function(update) {
-      console.log(update);
+      for (var i = 0; i < $scope.reviews.length; i++) {
+        var obj = $scope.reviews[i];
+        if (obj._id === update._id) {
+          $scope.reviews[i] = update;
+        }
+      }
     });
   };
 

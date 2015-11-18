@@ -67,8 +67,7 @@ router.get('/brunch-reviews/:id', function(req, res, next) {
 });
 
 // put single review
-router.put('/brunch-reviews/:id/:update', function(req, res, next) {
-  console.log(req.params.id, 'single review put');
+router.put('/brunch-reviews/:id', function(req, res, next) {
   var update = {
     restaurantName: req.body.restaurantName,
     address: req.body.address,
@@ -81,7 +80,10 @@ router.put('/brunch-reviews/:id/:update', function(req, res, next) {
     published: req.body.published,
     images: req.body.photos
   };
-  Review.findByIdAndUpdateQ(req.params.id, update)
+  var options = {
+    new: true,
+  }
+  Review.findByIdAndUpdateQ(req.params.id, update, options)
   .then(function(response) {
     console.log(response, 'put got it');
     res.json(response);
