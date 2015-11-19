@@ -113,13 +113,15 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <h5>Address: {{review.address}}</h5>
         <h5>Location: {{review.location}}</h5>
         <h5>Rating: {{review.rating}}</h5>
+        <br>
+        <br>
 
 
 
     </div>
   <div class='row'>
     <div class='col-md-12'>
-      <p>{{review.article}}</p>
+      <p class='left'>{{review.article}}</p>
         <div class='btn-group center'>
           <button  ng-click='trueScope(); getSingleBlogPost(review._id)' class="btn btn-success border">Edit  <span class="glyphicon glyphicon-pencil"></span></button>
           <button ng-click='deleteBlogPost(review._id)' class="btn btn-danger small border">Delete  <span class="glyphicon glyphicon-remove"></span></button>
